@@ -4,7 +4,7 @@ inputScore = {
     "Dummies": {
         "Override": "Lower"
     },
-    "Muskets": {
+    "Musket": {
         "Override": "Lower"
     },
     "Speed": {
@@ -49,4 +49,4 @@ def GetPracticals(usernames, missing):
 
 def InitialiseInputs():
     for test in inputScore:
-        inputScore[test]["File"] = open(inputFolder + "/" + test + ".txt", "r").readlines()
+        inputScore[test]["File"] = open(inputFolder + "/practical" + test + ".txt", "r").readlines()
