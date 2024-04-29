@@ -1,20 +1,26 @@
-from GetCadets import getCadets
+from GetCadets import GetCadets
+from GetKnowledge import GetKnowledge
 
 outputFiles = {
     "Usernames": open("Outputs/Usernames.txt", "w")
 }
 
-usernames = getCadets()
-
 def main():
-    writeUsernames()
+    scores = GetCadets() # {LowercaseUsername: {Username: username}}
+    missing = {}
 
-def writeUsernames():
-    file = outputFiles["Usernames"]
+    scores, missing = GetKnowledge(scores, missing)
 
-    for _, username in enumerate(usernames):
-        file.write(username + "\n")
-    file.close()
+    print(scores)
+    print(missing)
+    
+
+# def writeUsernames():
+#     file = outputFiles["Usernames"]
+
+#     for _, username in enumerate(usernames):
+#         file.write(username + "\n")
+#     file.close()
 
 if __name__ == "__main__":
     main()
