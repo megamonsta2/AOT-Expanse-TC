@@ -15,11 +15,11 @@ def GetKnowledge(usernames, missing):
         
         else: # not AT
             if name.lower() not in missing: # new missing data
-                missing[name.lower()] = {"Username": name, "Written": score}
+                missing[name.lower()] = {"Username": name, "Knowledge": score}
             else: # has missing data
                 addScore(missing, name.lower(), score)
 
 def addScore(tbl, name, score):
     plrData = tbl[name]
-    if ("Written" not in plrData) or (plrData["Written"] > score): # score doesnt exist OR existing score is greater than new score
-        plrData["Written"] = score # assign new score
+    if ("Knowledge" not in plrData) or (plrData["Knowledge"] > score): # score doesnt exist OR existing score is greater than new score
+        plrData["Knowledge"] = score # assign new score
