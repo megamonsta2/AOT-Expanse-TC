@@ -4,11 +4,6 @@ import json
 groupID = "8536935"
 roleID = "107675583" # AT
 
-outputFile = "Outputs/Usernames.txt"
-
-def main():
-    writeToFile(getCadets())
-
 def getCadets():
     usernames = []
     nextCursor = ""
@@ -26,13 +21,3 @@ def getCadets():
             nextCursor = parsedData["nextPageCursor"]
     
     return usernames
-
-def writeToFile(usernames):
-    file = open(outputFile, "w")
-
-    for _, username in enumerate(usernames):
-        file.write(username + "\n")
-    file.close()
-
-if __name__ == "__main__":
-    main()
