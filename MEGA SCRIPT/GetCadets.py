@@ -5,7 +5,7 @@ groupID = "8536935"
 roleID = "107675583" # AT
 
 def getCadets():
-    usernames = []
+    usernames = {}
     nextCursor = ""
 
     while True:
@@ -13,7 +13,8 @@ def getCadets():
         
         parsedData = json.loads(requests.get(url).text)
         for _, plrData in enumerate(parsedData["data"]):
-            usernames.append(plrData["username"])
+            username = plrData["username"]
+            usernames[username.lower()] = {"Username": username}
 
         if not parsedData["nextPageCursor"]:
             break
