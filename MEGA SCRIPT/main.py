@@ -1,5 +1,6 @@
 from GetCadets import GetCadets
 from GetKnowledge import GetKnowledge
+from GetPracticals import GetPracticals
 
 outputFiles = {
     "Usernames": open("Outputs/Usernames.txt", "w")
@@ -10,6 +11,7 @@ def main():
     missing = {}
 
     GetKnowledge(scores, missing)
+    GetPracticals(scores, missing)
     # scores, missing = GetKnowledge(scores, missing)
 
     print(scores)
