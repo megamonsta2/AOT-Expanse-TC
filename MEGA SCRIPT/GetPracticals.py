@@ -32,20 +32,23 @@ def GetPracticals(usernames, missing):
             score = int(line[dividerIndex+len(divider):])
 
             if name.lower() in usernames: # player is an AT
-                plrData = usernames[name.lower()]
-
-                if (
-                test not in plrData or # score doesnt exist
-                (override == "Lower" and plrData[test] > score) or # existing score is greater than new score
-                (override == "Higher" and plrData[test] < score) # existing score is less than new score
-                ): # score doesnt exist
-                    plrData[test] = score # assign new score
+                addScore(usernames, name.lower(), test, score, override)
 
             else: # not AT
                 if name.lower() not in missing: # new missing data
                     missing[name.lower()] = {"Username": name, test: score}
                 else: # has missing data
-                    missing[name.lower()][test] = score
+                    addScore(missing, name.lower(), test, score, override)
+
+def addScore(tbl, name, test, score, override):
+    plrData = tbl[name]
+
+    if (
+        test not in plrData or # score doesnt exist
+        (override == "Lower" and plrData[test] > score) or # existing score is greater than new score
+        (override == "Higher" and plrData[test] < score) # existing score is less than new score
+        ): # score doesnt exist
+            plrData[test] = score # assign new score
 
 def InitialiseInputs():
     for test in inputScore:
