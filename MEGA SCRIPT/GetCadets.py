@@ -25,7 +25,6 @@ def getCadets():
         else:
             nextCursor = parsedData["nextPageCursor"]
     
-    print(usernames)
     return usernames
 
 def writeToFile(usernames):
