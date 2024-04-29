@@ -1,6 +1,7 @@
 from GetCadets import GetCadets
 from GetKnowledge import GetKnowledge
 from GetPracticals import GetPracticals
+from GetBonus import GetBonus
 
 outputFiles = {
     "Usernames": open("Outputs/Usernames.txt", "w")
@@ -12,6 +13,7 @@ def main():
 
     GetKnowledge(scores, missing)
     GetPracticals(scores, missing)
+    GetBonus(scores, missing)
     # scores, missing = GetKnowledge(scores, missing)
 
     print(scores)
