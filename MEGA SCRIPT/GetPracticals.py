@@ -16,7 +16,6 @@ inputScore = {
 } # {string: {USERNAME - SCORE}}
 
 divider = " - "
-scores = {} # {USERNAME: {Musket: score, Speed: score, Dummies: score}}
 
 def GetPracticals(usernames, missing):
     InitialiseInputs()
