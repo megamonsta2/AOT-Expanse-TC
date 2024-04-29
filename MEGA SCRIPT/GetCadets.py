@@ -4,7 +4,7 @@ import json
 groupID = "8536935"
 roleID = "107675583" # AT
 
-def getCadets():
+def GetCadets():
     usernames = {}
     nextCursor = ""
 
