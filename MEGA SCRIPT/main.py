@@ -9,11 +9,13 @@ def main():
     scores = GetCadets() # {LowercaseUsername: {Username: username}}
     missing = {}
 
-    scores, missing = GetKnowledge(scores, missing)
+    GetKnowledge(scores, missing)
+    # scores, missing = GetKnowledge(scores, missing)
 
     print(scores)
     print(missing)
     
+    input()
 
 # def writeUsernames():
 #     file = outputFiles["Usernames"]

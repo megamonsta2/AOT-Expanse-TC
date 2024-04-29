@@ -22,4 +22,4 @@ def GetKnowledge(usernames, missing):
             else: # has missing data
                 missing[name.lower()]["Written"] = scoreToAdd
     
-    return usernames, missing
+    # return usernames, missing
