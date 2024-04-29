@@ -3,11 +3,20 @@ from GetKnowledge import GetKnowledge
 from GetPracticals import GetPracticals
 from GetBonus import GetBonus
 
+outputFolder = "Outputs"
 outputFiles = {
-    "Usernames": open("Outputs/Usernames.txt", "w")
+    "Username": True,
+    "Knowledge": True,
+    "Musket": True,
+    "Dummies": True,
+    "Speed": True,
+    "TT": True,
+    "Bonus": True,
 }
 
 def main():
+    InitialiseOutputFiles()
+
     scores = GetCadets() # {LowercaseUsername: {Username: username}}
     missing = {}
 
@@ -20,6 +29,10 @@ def main():
     print(missing)
     
     input()
+
+def InitialiseOutputFiles():
+    for key in outputFiles:
+        outputFiles[key] = open(outputFolder + "/" + key + ".txt", "w")
 
 # def writeUsernames():
 #     file = outputFiles["Usernames"]
