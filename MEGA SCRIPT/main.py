@@ -7,8 +7,9 @@ outputFiles = {
 usernames = getCadets()
 
 def main():
+    writeUsernames()
 
-    # write usernames
+def writeUsernames():
     file = outputFiles["Usernames"]
 
     for _, username in enumerate(usernames):
