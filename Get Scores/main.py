@@ -61,7 +61,7 @@ def WriteToMissing(missing):
         toWrite = ""
         for _, test in enumerate(writeMissingOrder):
             toWrite += test + ": "
-            if plrData[test]:
+            if test in plrData:
                 toWrite += str(plrData[test])
             else:
                 toWrite += "N/A"
