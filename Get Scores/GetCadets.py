@@ -2,7 +2,7 @@ import requests
 import json
 
 groupID = "8536935"
-roleID = "107675583" # AT
+roleID = "106749302" # AT
 
 def GetCadets():
     usernames = {}
