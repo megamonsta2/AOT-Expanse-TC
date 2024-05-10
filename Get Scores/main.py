@@ -65,8 +65,8 @@ def WriteToMissing(missing):
                 toWrite += str(plrData[test])
             else:
                 toWrite += "N/A"
-            toWrite += test + " | "
-        file.write(toWrite)
+            toWrite += " | "
+        file.write(toWrite + "\n")
 
 def CloseFiles():
     for file in outputFiles:
