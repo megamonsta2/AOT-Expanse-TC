@@ -8,7 +8,8 @@ __pycache__/
 *$py.class
 
 # IO
-Get Scores/Inputs/bonus.txt
+Inputs/
+Outputs/
 
 # C extensions
 *.so
