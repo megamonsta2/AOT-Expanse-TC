@@ -24,3 +24,5 @@ def addScore(tbl, name, score):
         plrData["Bonus"] = score # assign new score
     else:
         plrData["Bonus"] += score # add
+    if plrData["Bonus"] > 10:
+        plrData["Bonus"] = 10
