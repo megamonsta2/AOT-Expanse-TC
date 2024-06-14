@@ -48,11 +48,11 @@ def addScore(tbl, name, test, score, override):
         (override == "Lower" and plrData[test] > score) or # existing score is greater than new score
         (override == "Higher" and plrData[test] < score) # existing score is less than new score
         ): # score doesnt exist
-            
-            if not (name == "TT"): # if not TT score
+
+            if not (test == "TT"): # if not TT score
                 plrData[test] = score # assign new score
             else: # check if they have a prac score
-                for _, tempTest in plrData: # go through every test
+                for tempTest in inputScore: # go through every test
                     if tempTest in plrData: # if test found
                         return
                 
