@@ -1,1 +1,1 @@
-# AOT-Expanse-TC
+The score sorting system for AOT Vogel (previously known as expanse).

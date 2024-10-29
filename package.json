@@ -1,0 +1,30 @@
+{
+  "name": "expanse",
+  "version": "3.0.0",
+  "description": "The score sorting system for AOT Vogel (previously known as expanse).",
+  "main": "src/main.ts",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx tsx ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.8.1",
+    "@types/readline-sync": "^1.4.8",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.11.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.12.1"
+  },
+  "dependencies": {
+    "process": "^0.11.10",
+    "readline-sync": "^1.4.10",
+    "xlsx": "^0.18.5"
+  }
+}
