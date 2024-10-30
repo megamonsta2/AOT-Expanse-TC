@@ -136,7 +136,12 @@ function RemovePlayers(Usernames: string[]): Promise<void[]> {
   const Promises: Promise<void>[] = [];
 
   for (const username of Usernames) {
-    Promises.push(new Promise(() => RemoveMissingPlayer(username)));
+    Promises.push(
+      new Promise((resolve) => {
+        RemoveMissingPlayer(username);
+        resolve();
+      }),
+    );
   }
 
   return Promise.all(Promises);
