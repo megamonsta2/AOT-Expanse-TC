@@ -165,7 +165,7 @@ async function GetScores(type: string, file: string, max: number) {
 
     // Check if valid
     if (!AllValid) {
-      SendErrors(type, ErrorMessages);
+      await SendErrors(type, ErrorMessages);
 
       // Recalculate vars
       CurrentInput = await ReadFile(file);
