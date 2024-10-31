@@ -1,12 +1,6 @@
 // Modules
-import {
-  LogPlayer,
-  ValidateLine,
-  SendErrors,
-  ReadFile,
-  FormatString,
-  WaitForKey,
-} from "./Storage.js";
+import { LogPlayer, ValidateLine } from "./Storage.js";
+import { ReadFile, WaitForKey, FormatString, SendErrors } from "../Utils.js";
 
 // Variables
 const MAX_SCORE = 60;
