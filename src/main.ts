@@ -2,10 +2,11 @@
 import { question } from "readline-sync";
 import { Create as CreateFiles, Clear as ClearFiles } from "./Files.js";
 import { index as OrderScores } from "./OrderScores/index.js";
+import Sort from "./Sort.js";
 
 // Variables
 const QUESTION =
-  "What action?\r\n1. Create Files\r\n2. Clear Files\r\n3. Order Scores\r\n4. Quit\r\n> ";
+  "What action?\r\n1. Create Files\r\n2. Clear Files\r\n3. Order Scores\r\n4. Sort Scores\r\n5. Quit\r\n> ";
 
 // Module Setup
 async function main() {
@@ -19,6 +20,8 @@ async function main() {
     } else if (answer == "3") {
       await OrderScores();
     } else if (answer == "4") {
+      await Sort();
+    } else if (answer == "5") {
       process.exit();
     } else {
       console.log("Invalid input!");
