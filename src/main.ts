@@ -1,6 +1,6 @@
 // Modules
 import { question } from "readline-sync";
-import * as Files from "./Files.js";
+import { Create as CreateFiles, Clear as ClearFiles } from "./Files.js";
 import { index as OrderScores } from "./OrderScores/index.js";
 
 // Variables
@@ -13,9 +13,9 @@ async function main() {
     const answer = question(QUESTION);
 
     if (answer == "1") {
-      await Files.Create();
+      await CreateFiles();
     } else if (answer == "2") {
-      await Files.Clear();
+      await ClearFiles();
     } else if (answer == "3") {
       await OrderScores();
     } else if (answer == "4") {
