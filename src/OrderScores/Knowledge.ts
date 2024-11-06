@@ -20,7 +20,7 @@ async function GetData() {
     console.warn(
       "The length of the knowledge test names and scores are NOT the same.\r\nWhen this is amended, press any key.",
     );
-    WaitForKey();
+    await WaitForKey();
 
     [RawNames, RawScores] = await ReadFiles();
   }
