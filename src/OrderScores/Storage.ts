@@ -50,8 +50,6 @@ export class Player {
   }
 
   AddCorePractical(type: Practical, score: number) {
-    score *= 2;
-
     // If prac score doesn't exist or exists and score is less than current prac
     if (!this[type] || this[type] > score) {
       this[type] = score;

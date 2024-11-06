@@ -3,7 +3,7 @@ import { Practical, AddScores } from "./Storage.js";
 
 // Variables
 const MAX_SCORES: { [key in Practical]: number } = {
-  Dummies: 0,
+  Dummies: 20,
   Speed: 15,
   Musket: 5,
 };
