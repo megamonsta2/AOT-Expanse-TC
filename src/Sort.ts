@@ -17,6 +17,8 @@ export default async () => {
 };
 
 async function SortScores() {
+  SortedScores.clear();
+
   const Errors: string[] = [];
   let InputData = await ReadFile(INPUT_FILE);
 
