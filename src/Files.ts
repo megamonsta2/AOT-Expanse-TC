@@ -11,8 +11,9 @@ const INPUT_FILES = [
   "Speed.txt",
   "Dummies.txt",
   "TitanTraining.txt",
+  "Unsorted.txt",
 ];
-const OUTPUT_FILES = ["Scores.csv", "Missing.csv"];
+const OUTPUT_FILES = ["Scores.csv", "Missing.csv", "Sorted.txt"];
 
 // Export Functions
 export async function Create(): Promise<void[]> {
