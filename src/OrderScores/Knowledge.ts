@@ -49,7 +49,7 @@ async function GetData() {
       await SendErrors("knowledge", ErrorMessages);
 
       // Recalculate vars
-      RawScores = await ReadFile("KnowledgeScores");
+      [RawNames, RawScores] = await ReadFiles();
       ErrorMessages.length = 0;
     } else {
       break;
