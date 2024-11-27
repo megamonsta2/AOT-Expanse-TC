@@ -46,7 +46,7 @@ async function GetData() {
 
     // Check if valid
     if (!AllValid) {
-      SendErrors("knowledge", ErrorMessages);
+      await SendErrors("knowledge", ErrorMessages);
 
       // Recalculate vars
       RawScores = await ReadFile("KnowledgeScores");
